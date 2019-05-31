@@ -1,0 +1,29 @@
+.figure-portfolio__wrapper-img {
+  padding: 0 100px 100px 0;
+}
+.item_shadow {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 15%;
+  top: 15%;
+  -webkit-filter: blur(60px);
+  filter: blur(60px);
+  transform: scale(0.55);
+  -webkit-transform: scale(0.55);
+  z-index: -1;
+}
+.item_shadow img {
+  border: 0 none;
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+}
+.is-outer {
+  stroke-width: 4;
+  stroke-dasharray: 227;
+  stroke-dashoffset: 227;
+  transform-origin: 50%;
+  transform: rotate(90deg);
+  transition: stroke-dashoffset 400ms linear 0.2s;
+}

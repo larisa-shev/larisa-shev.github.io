@@ -780,10 +780,10 @@ textarea.form-control.is-invalid {
 .figure-exchange .form-check-label {
   cursor: pointer;
 }
-.figure-exchange input:focus + .figure-exchange__icon {
+.figure-exchange input:checked + .figure-exchange__icon {
   background-color: #181b1a;
 }
-.figure-exchange input:focus + .figure-exchange__header h3 {
+.figure-exchange input:checked + .figure-exchange__header h3 {
   font-weight: 600;
   color: #3c5a64;
 }
@@ -930,28 +930,28 @@ textarea.form-control.is-invalid {
 .btn_exchange .lnr {
   margin-right: 10px;
 }
-.btn_exchange:hover .lnr {
+.fa-spin {
   -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
 }
 @-webkit-keyframes fa-spin {
   0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
 @keyframes fa-spin {
   0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
 #section_exchange_to,
@@ -959,4 +959,12 @@ textarea.form-control.is-invalid {
 #section_exchange_detals,
 #section_exchange_info {
   display: none;
+}
+#obmen_wrapper {
+  display: none;
+}
+#exc_title,
+#section_exchange_from {
+  display: none;
+  opacity: 0;
 }

@@ -34,6 +34,13 @@
   		});
   	});
 
+  	$('#section_exchange_from input').on('click', function() {
+		  $('#exchange_input_currency').html( $('#section_exchange_from input:checked').val() );
+		});
+		$('#section_exchange_to input').on('click', function() {
+		  $('#exchange_output_currency').html( $('#section_exchange_to input:checked').val() );
+		});
+
   }); //end ready
 
 }(jQuery));

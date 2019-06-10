@@ -40,6 +40,9 @@
   /* padding: 0 100px 100px 0; */
   box-shadow: 0px 4px 49px 0px rgba(0, 0, 0, 0.9);
 }
+.figure-portfolio__wrapper-img img {
+  width: 100%;
+}
 .item_shadow {
   position: absolute;
   height: 100%;

@@ -33,13 +33,13 @@
                         </g>
                     </svg>
                     <div class="logo">
-                        <div class="logo__text">ex-change.me</div>
+                        <img src="static/img/content/logo_footer.png" alt="">
                     </div>
                 </div>
             </div>
         </div>
         <!-- - PAGE PRELOADER -->
-        <div class="page-wrapper">
+        <div class="page-wrapper" id="page_wrapper">
             <!-- PAGE HEADER -->
             <header class="header site-header js-header-sticky header_light">
                 <div class="container-fluid">
@@ -53,7 +53,7 @@
                         <div class="col-auto d-xl-block d-none">
                             <ul class="menu">
                                 <li class="menu-item"><a href="index.html"><i class="lnr lnr-home"></i></a></li>
-                                <li class="menu-item"><a href="obmen.html">Обмен</a></li>
+                                <li class="menu-item"><a href="javascript:void(0);" onclick="goto_exchange();">Обмен</a></li>
                                 <li class="menu-item"><a href="#">Безопасность</a></li>
                                 <li class="menu-item"><a href="#">Акции</a></li>
                                 <li class="menu-item"><a href="#">Новости</a></li>
@@ -86,7 +86,7 @@
                                         </a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="obmen.html">
+                                        <a href="javascript:void(0);" onclick="goto_exchange();">
                                             <div class="overlay-menu__item-wrapper">
                                                 <div class="overlay-menu__item-line"></div>
                                                 <div class="overlay-menu__item-counter">02</div><span>Обмен</span>
@@ -149,351 +149,872 @@
             </header>
             <!-- - PAGE HEADER -->
             <main class="site-main">
-                <!-- section INTRO -->
-                <section class="section section-intro bg-dark" data-os-animation="data-os-animation">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h1>Проект <span class="highlight">ex-change.me<span class="highlight__bg"></span></span> - обменный ресурс нового поколения в сети.</h1>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- - section INTRO -->
-                <!-- section PORTFOLIO -->
-                <section class="section section_mb section-portfolio">
-                    <div class="container">
-                        <div class="section-portfolio__wrapper-item">
-                            <div class="row figure-portfolio justify-content-end figure-portfolio_horizontal figure-portfolio_right" data-os-animation="data-os-animation">
-                                <a class="figure-portfolio__link col col-lg-10" href="#">
-                                    <div class="figure-portfolio__wrapper-img overflow">
-                                        <div class="overflow__curtain bg-accent"></div>
-                                        <div class="overflow__content">
-                                            <img src="static/img/assets/index/Obmen.jpg" alt="ОБМЕНЯТЬ ДЕНЬГИ" />
-                                        </div>
-                                        <div class="item_shadow is-o">
-                                            <img src="static/img/assets/index/Obmen.jpg" alt="ОБМЕНЯТЬ ДЕНЬГИ" />
-                                        </div>
-                                    </div>
-                                    <div class="figure-portfolio__info">Быстрый и честный обмен</div>
-                                    <header class="figure-portfolio__header">
-                                        <div class="figure-portfolio__headline"></div>
-                                        <h2>ОБМЕНЯТЬ ДЕНЬГИ</h2>
-                                    </header>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="section-portfolio__wrapper-item">
-                            <div class="row figure-portfolio justify-content-start figure-portfolio_vertical figure-portfolio_left" data-os-animation="data-os-animation">
-                                <a class="figure-portfolio__link col col-lg-5" href="#">
-                                    <div class="figure-portfolio__wrapper-img overflow">
-                                        <div class="overflow__curtain bg-accent"></div>
-                                        <div class="overflow__content">
-                                            <img src="static/img/assets/index/bezopasnost.jpg" alt=" БЕЗОПАСНОСТЬ" />
-                                        </div>
-                                    </div>
-                                    <div class="figure-portfolio__info">Конфиденциальность данных</div>
-                                    <header class="figure-portfolio__header">
-                                        <div class="figure-portfolio__headline"></div>
-                                        <h2>БЕЗОПАСНОСТЬ</h2>
-                                    </header>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="section-portfolio__wrapper-item">
-                            <div class="row figure-portfolio justify-content-end figure-portfolio_vertical figure-portfolio_right" data-os-animation="data-os-animation">
-                                <a class="figure-portfolio__link col col-lg-5" href="#">
-                                    <div class="figure-portfolio__wrapper-img overflow">
-                                        <div class="overflow__curtain bg-accent"></div>
-                                        <div class="overflow__content">
-                                            <img src="static/img/assets/index/akcii.jpg" alt="АКЦИИ" />
-                                        </div>
-                                    </div>
-                                    <div class="figure-portfolio__info">Скидки и бонусы</div>
-                                    <header class="figure-portfolio__header">
-                                        <div class="figure-portfolio__headline"></div>
-                                        <h2>АКЦИИ</h2>
-                                    </header>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="section-portfolio__wrapper-item">
-                            <div class="row figure-portfolio justify-content-start figure-portfolio_horizontal figure-portfolio_left" data-os-animation="data-os-animation">
-                                <a class="figure-portfolio__link col col-lg-10" href="#">
-                                    <div class="figure-portfolio__wrapper-img overflow">
-                                        <div class="overflow__curtain bg-accent"></div>
-                                        <div class="overflow__content">
-                                            <img src="static/img/assets/index/news.jpg" alt="НОВОСТИ" />
-                                        </div>
-                                    </div>
-                                    <div class="figure-portfolio__info">Технологии и криптовалюты</div>
-                                    <header class="figure-portfolio__header">
-                                        <div class="figure-portfolio__headline"></div>
-                                        <h2>НОВОСТИ</h2>
-                                    </header>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="section-portfolio__wrapper-button text-center"><a class="button" href="obmen.html"><span>ОБМЕНЯТЬ ДЕНЬГИ</span></a>
+                <div id="start_wrapper">
+                    <!-- section INTRO -->
+                    <section class="section section-intro bg-dark" data-os-animation="data-os-animation" id="section_intro">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h1>Проект <span class="highlight">ex-change.me<span class="highlight__bg"></span></span> - обменный ресурс нового поколения в сети.</h1>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-                <!-- - section PORTFOLIO -->
-                <!-- section SERVICES -->
-                <section class="section section-services">
-                    <header class="section-header container" data-os-animation="data-os-animation">
-                        <div class="row">
-                            <div class="col">
-                                <div class="section-header__label">
-                                    <div class="section-header__square"></div><span>ПРАВИЛА</span>
+                    </section>
+                    <!-- - section INTRO -->
+                    <!-- section PORTFOLIO -->
+                    <section class="section section_mb section-portfolio" id="section_portfolio">
+                        <div class="container">
+                            <div class="section-portfolio__wrapper-item">
+                                <div class="row figure-portfolio justify-content-end figure-portfolio_horizontal figure-portfolio_right" data-os-animation="data-os-animation">
+                                    <a class="figure-portfolio__link col col-lg-10" href="javascript:void(0);" onclick="goto_exchange();">
+                                        <div class="figure-portfolio__wrapper-img overflow">
+                                            <div class="overflow__curtain bg-accent"></div>
+                                            <div class="overflow__content">
+                                                <img src="static/img/assets/index/Obmen.jpg" alt="ОБМЕНЯТЬ ДЕНЬГИ" />
+                                            </div>
+                                        </div>
+                                        <div class="figure-portfolio__info">Быстрый и честный обмен</div>
+                                        <header class="figure-portfolio__header">
+                                            <div class="figure-portfolio__headline"></div>
+                                            <h2>ОБМЕНЯТЬ ДЕНЬГИ</h2>
+                                        </header>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="section-portfolio__wrapper-item">
+                                <div class="row figure-portfolio justify-content-start figure-portfolio_vertical figure-portfolio_left" data-os-animation="data-os-animation">
+                                    <a class="figure-portfolio__link col col-lg-5" href="#">
+                                        <div class="figure-portfolio__wrapper-img overflow">
+                                            <div class="overflow__curtain bg-accent"></div>
+                                            <div class="overflow__content">
+                                                <img src="static/img/assets/index/bezopasnost.jpg" alt=" БЕЗОПАСНОСТЬ" />
+                                            </div>
+                                        </div>
+                                        <div class="figure-portfolio__info">Конфиденциальность данных</div>
+                                        <header class="figure-portfolio__header">
+                                            <div class="figure-portfolio__headline"></div>
+                                            <h2>БЕЗОПАСНОСТЬ</h2>
+                                        </header>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="section-portfolio__wrapper-item">
+                                <div class="row figure-portfolio justify-content-end figure-portfolio_vertical figure-portfolio_right" data-os-animation="data-os-animation">
+                                    <a class="figure-portfolio__link col col-lg-5" href="#">
+                                        <div class="figure-portfolio__wrapper-img overflow">
+                                            <div class="overflow__curtain bg-accent"></div>
+                                            <div class="overflow__content">
+                                                <img src="static/img/assets/index/akcii.jpg" alt="АКЦИИ" />
+                                            </div>
+                                        </div>
+                                        <div class="figure-portfolio__info">Скидки и бонусы</div>
+                                        <header class="figure-portfolio__header">
+                                            <div class="figure-portfolio__headline"></div>
+                                            <h2>АКЦИИ</h2>
+                                        </header>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="section-portfolio__wrapper-item">
+                                <div class="row figure-portfolio justify-content-start figure-portfolio_horizontal figure-portfolio_left" data-os-animation="data-os-animation">
+                                    <a class="figure-portfolio__link col col-lg-10" href="#">
+                                        <div class="figure-portfolio__wrapper-img overflow">
+                                            <div class="overflow__curtain bg-accent"></div>
+                                            <div class="overflow__content">
+                                                <img src="static/img/assets/index/news.jpg" alt="НОВОСТИ" />
+                                            </div>
+                                        </div>
+                                        <div class="figure-portfolio__info">Технологии и криптовалюты</div>
+                                        <header class="figure-portfolio__header">
+                                            <div class="figure-portfolio__headline"></div>
+                                            <h2>НОВОСТИ</h2>
+                                        </header>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="section-portfolio__wrapper-button text-center"><a class="button" href="javascript:void(0);" onclick="goto_exchange();"><span>ОБМЕНЯТЬ ДЕНЬГИ</span></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <h2>Тут нужен текст на пару строк о правилах и тд. так как внизу будут квадраты с данными правилами работы и чего придерживаемся....</h2>
-                            </div>
-                        </div>
-                    </header>
-                    <div class="swiper-container slider slider-services js-slider-services">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a class="figure-service" href="#">
-                                    <header class="figure-service__header">
-                                        <div class="figure-service__headline"></div>
-                                        <h3>Заголовок правила</h3>
-                                        <p>Само правило или принцип. Правило для копирайтера и SEO: Колличество символов столько же как в этом абзаце. Надо выразить правильно и емко.</p>
-                                    </header>
-                                    <div class="figure-service__icon">
-                                        <div class="lnr lnr-checkmark-circle"></div>
-                                        <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <g fill="none" fill-rule="evenodd">
-                                                <g transform="translate(-134.000000, -98.000000)">
-                                                    <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
-                                                </g>
-                                            </g>
-                                        </svg>
+                    </section>
+                    <!-- - section PORTFOLIO -->
+                    <!-- section SERVICES -->
+                    <section class="section section-services">
+                        <header class="section-header container" data-os-animation="data-os-animation">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="section-header__label">
+                                        <div class="section-header__square"></div><span>ПРАВИЛА</span>
                                     </div>
-                                    <div class="figure-service__number">01</div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a class="figure-service" href="#">
-                                    <header class="figure-service__header">
-                                        <div class="figure-service__headline"></div>
-                                        <h3>Заголовок правила</h3>
-                                        <p>Само правило или принцип. Правило для копирайтера и SEO: Колличество символов столько же как в этом абзаце. Надо выразить правильно и емко.</p>
-                                    </header>
-                                    <div class="figure-service__icon">
-                                        <div class="lnr lnr-checkmark-circle"></div>
-                                        <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <g fill="none" fill-rule="evenodd">
-                                                <g transform="translate(-134.000000, -98.000000)">
-                                                    <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <div class="figure-service__number">02</div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a class="figure-service" href="#">
-                                    <header class="figure-service__header">
-                                        <div class="figure-service__headline"></div>
-                                        <h3>Заголовок правила</h3>
-                                        <p>Само правило или принцип. Правило для копирайтера и SEO: Колличество символов столько же как в этом абзаце. Надо выразить правильно и емко.</p>
-                                    </header>
-                                    <div class="figure-service__icon">
-                                        <div class="lnr lnr-checkmark-circle"></div>
-                                        <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <g fill="none" fill-rule="evenodd">
-                                                <g transform="translate(-134.000000, -98.000000)">
-                                                    <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <div class="figure-service__number">03</div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a class="figure-service" href="#">
-                                    <header class="figure-service__header">
-                                        <div class="figure-service__headline"></div>
-                                        <h3>Заголовок правила</h3>
-                                        <p>Само правило или принцип. Правило для копирайтера и SEO: Колличество символов столько же как в этом абзаце. Надо выразить правильно и емко.</p>
-                                    </header>
-                                    <div class="figure-service__icon">
-                                        <div class="lnr lnr-checkmark-circle"></div>
-                                        <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <g fill="none" fill-rule="evenodd">
-                                                <g transform="translate(-134.000000, -98.000000)">
-                                                    <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <div class="figure-service__number">04</div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a class="figure-service" href="#">
-                                    <header class="figure-service__header">
-                                        <div class="figure-service__headline"></div>
-                                        <h3>Заголовок правила</h3>
-                                        <p>Само правило или принцип. Правило для копирайтера и SEO: Колличество символов столько же как в этом абзаце. Надо выразить правильно и емко.</p>
-                                    </header>
-                                    <div class="figure-service__icon">
-                                        <div class="lnr lnr-checkmark-circle"></div>
-                                        <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <g fill="none" fill-rule="evenodd">
-                                                <g transform="translate(-134.000000, -98.000000)">
-                                                    <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <div class="figure-service__number">05</div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a class="figure-service" href="#">
-                                    <header class="figure-service__header">
-                                        <div class="figure-service__headline"></div>
-                                        <h3>Заголовок правила</h3>
-                                        <p>Само правило или принцип. Правило для копирайтера и SEO: Колличество символов столько же как в этом абзаце. Надо выразить правильно и емко.</p>
-                                    </header>
-                                    <div class="figure-service__icon">
-                                        <div class="lnr lnr-checkmark-circle"></div>
-                                        <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <g fill="none" fill-rule="evenodd">
-                                                <g transform="translate(-134.000000, -98.000000)">
-                                                    <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <div class="figure-service__number">06</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="row justify-content-between align-items-center">
-                            <div class="col-auto">
-                                <div class="slider__arrows">
-                                    <div class="slider__arrow js-slider-services__arrow-left">keyboard_arrow_left</div>
-                                    <div class="slider__arrow js-slider-services__arrow-right">keyboard_arrow_right</div>
                                 </div>
                             </div>
-                            <div class="col-auto">
-                                <div class="slider__progress">
-                                    <div class="swiper-container slider__counter slider__counter_current js-slider-services-counter-current">
-                                        <div class="swiper-wrapper"></div>
-                                    </div>
-                                    <div class="slider__progressbar js-slider-services-progress">
-                                        <div class="slider__progressbar-fill"></div>
-                                    </div>
-                                    <div class="slider__counter slider__counter_total js-slider-services-counter-total">00</div>
+                            <div class="row">
+                                <div class="col">
+                                    <h2>Тут нужен текст на пару строк о правилах и тд. так как внизу будут квадраты с данными правилами работы и чего придерживаемся....</h2>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="swiper-container slider slider-services js-slider-services">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a class="figure-service" href="#">
+                                        <header class="figure-service__header">
+                                            <div class="figure-service__headline"></div>
+                                            <h3>Заголовок правила</h3>
+                                            <p>Само правило или принцип. Правило для копирайтера и SEO: Колличество символов столько же как в этом абзаце. Надо выразить правильно и емко.</p>
+                                        </header>
+                                        <div class="figure-service__icon">
+                                            <div class="lnr lnr-checkmark-circle"></div>
+                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="figure-service__number">01</div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a class="figure-service" href="#">
+                                        <header class="figure-service__header">
+                                            <div class="figure-service__headline"></div>
+                                            <h3>Заголовок правила</h3>
+                                            <p>Само правило или принцип. Правило для копирайтера и SEO: Колличество символов столько же как в этом абзаце. Надо выразить правильно и емко.</p>
+                                        </header>
+                                        <div class="figure-service__icon">
+                                            <div class="lnr lnr-checkmark-circle"></div>
+                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="figure-service__number">02</div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a class="figure-service" href="#">
+                                        <header class="figure-service__header">
+                                            <div class="figure-service__headline"></div>
+                                            <h3>Заголовок правила</h3>
+                                            <p>Само правило или принцип. Правило для копирайтера и SEO: Колличество символов столько же как в этом абзаце. Надо выразить правильно и емко.</p>
+                                        </header>
+                                        <div class="figure-service__icon">
+                                            <div class="lnr lnr-checkmark-circle"></div>
+                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="figure-service__number">03</div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a class="figure-service" href="#">
+                                        <header class="figure-service__header">
+                                            <div class="figure-service__headline"></div>
+                                            <h3>Заголовок правила</h3>
+                                            <p>Само правило или принцип. Правило для копирайтера и SEO: Колличество символов столько же как в этом абзаце. Надо выразить правильно и емко.</p>
+                                        </header>
+                                        <div class="figure-service__icon">
+                                            <div class="lnr lnr-checkmark-circle"></div>
+                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="figure-service__number">04</div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a class="figure-service" href="#">
+                                        <header class="figure-service__header">
+                                            <div class="figure-service__headline"></div>
+                                            <h3>Заголовок правила</h3>
+                                            <p>Само правило или принцип. Правило для копирайтера и SEO: Колличество символов столько же как в этом абзаце. Надо выразить правильно и емко.</p>
+                                        </header>
+                                        <div class="figure-service__icon">
+                                            <div class="lnr lnr-checkmark-circle"></div>
+                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="figure-service__number">05</div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a class="figure-service" href="#">
+                                        <header class="figure-service__header">
+                                            <div class="figure-service__headline"></div>
+                                            <h3>Заголовок правила</h3>
+                                            <p>Само правило или принцип. Правило для копирайтера и SEO: Колличество символов столько же как в этом абзаце. Надо выразить правильно и емко.</p>
+                                        </header>
+                                        <div class="figure-service__icon">
+                                            <div class="lnr lnr-checkmark-circle"></div>
+                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="figure-service__number">06</div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-                <!-- - section SERVICES -->
-                <!-- section TESTIMONIALS -->
-                <section class="section section_mt section-testimonials">
-                    <header class="section-header container" data-os-animation="data-os-animation">
-                        <div class="row">
-                            <div class="col">
-                                <div class="section-header__label">
-                                    <div class="section-header__square"></div><span>ОТЗЫВЫ</span>
+                        <div class="container">
+                            <div class="row justify-content-between align-items-center">
+                                <div class="col-auto">
+                                    <div class="slider__arrows">
+                                        <div class="slider__arrow js-slider-services__arrow-left">keyboard_arrow_left</div>
+                                        <div class="slider__arrow js-slider-services__arrow-right">keyboard_arrow_right</div>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="slider__progress">
+                                        <div class="swiper-container slider__counter slider__counter_current js-slider-services-counter-current">
+                                            <div class="swiper-wrapper"></div>
+                                        </div>
+                                        <div class="slider__progressbar js-slider-services-progress">
+                                            <div class="slider__progressbar-fill"></div>
+                                        </div>
+                                        <div class="slider__counter slider__counter_total js-slider-services-counter-total">00</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <h2>Вступительный текст об отзывах и как мы отлично работаем с клиентами. Нужно то-же колличество символов, кратко и емко...</h2>
+                    </section>
+                    <!-- - section SERVICES -->
+                    <!-- section TESTIMONIALS -->
+                    <section class="section section_mt section-testimonials">
+                        <header class="section-header container" data-os-animation="data-os-animation">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="section-header__label">
+                                        <div class="section-header__square"></div><span>ОТЗЫВЫ</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </header>
-                    <div class="container-fluid">
-                        <div class="bg-light">
-                            <div class="container slider slider-testimonials">
-                                <div class="row justify-content-between">
-                                    <div class="col-lg-10 order-lg-2">
-                                        <div class="swiper-container js-slider-testimonials">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <img class="slider-testimonials__author-avatar" src="static/img/assets/index/avatar.png" alt="avatar" />
-                                                    <p class="slider-testimonials__text">“Сам отзыв. Как всегда, четко и по теме. Расписать надо на то-же колличество символов. Далее текст рыба- Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений”</p>
-                                                    <div class="slider-testimonials__author">
-                                                        <div class="slider-testimonials__author-line"></div>
-                                                        <div class="slider-testimonials__author-name">Василий Николаевич</div>
-                                                        <div class="slider-testimonials__author-subline">Аноним</div>
+                            <div class="row">
+                                <div class="col">
+                                    <h2>Вступительный текст об отзывах и как мы отлично работаем с клиентами. Нужно то-же колличество символов, кратко и емко...</h2>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="container-fluid">
+                            <div class="bg-light">
+                                <div class="container slider slider-testimonials">
+                                    <div class="row justify-content-between">
+                                        <div class="col-lg-10 order-lg-2">
+                                            <div class="swiper-container js-slider-testimonials">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <img class="slider-testimonials__author-avatar" src="static/img/assets/index/avatar.png" alt="avatar" />
+                                                        <p class="slider-testimonials__text">“Сам отзыв. Как всегда, четко и по теме. Расписать надо на то-же колличество символов. Далее текст рыба- Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений”</p>
+                                                        <div class="slider-testimonials__author">
+                                                            <div class="slider-testimonials__author-line"></div>
+                                                            <div class="slider-testimonials__author-name">Василий Николаевич</div>
+                                                            <div class="slider-testimonials__author-subline">Аноним</div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img class="slider-testimonials__author-avatar" src="static/img/assets/index/avatar.png" alt="avatar" />
-                                                    <p class="slider-testimonials__text">“Сам отзыв. Как всегда, четко и по теме. Расписать надо на то-же колличество символов. Далее текст рыба- Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений”</p>
-                                                    <div class="slider-testimonials__author">
-                                                        <div class="slider-testimonials__author-line"></div>
-                                                        <div class="slider-testimonials__author-name">Василий Николаевич</div>
-                                                        <div class="slider-testimonials__author-subline">Аноним</div>
+                                                    <div class="swiper-slide">
+                                                        <img class="slider-testimonials__author-avatar" src="static/img/assets/index/avatar.png" alt="avatar" />
+                                                        <p class="slider-testimonials__text">“Сам отзыв. Как всегда, четко и по теме. Расписать надо на то-же колличество символов. Далее текст рыба- Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений”</p>
+                                                        <div class="slider-testimonials__author">
+                                                            <div class="slider-testimonials__author-line"></div>
+                                                            <div class="slider-testimonials__author-name">Василий Николаевич</div>
+                                                            <div class="slider-testimonials__author-subline">Аноним</div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img class="slider-testimonials__author-avatar" src="static/img/assets/index/avatar.png" alt="avatar" />
-                                                    <p class="slider-testimonials__text">“Сам отзыв. Как всегда, четко и по теме. Расписать надо на то-же колличество символов. Далее текст рыба- Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений”</p>
-                                                    <div class="slider-testimonials__author">
-                                                        <div class="slider-testimonials__author-line"></div>
-                                                        <div class="slider-testimonials__author-name">Василий Николаевич</div>
-                                                        <div class="slider-testimonials__author-subline">Аноним</div>
+                                                    <div class="swiper-slide">
+                                                        <img class="slider-testimonials__author-avatar" src="static/img/assets/index/avatar.png" alt="avatar" />
+                                                        <p class="slider-testimonials__text">“Сам отзыв. Как всегда, четко и по теме. Расписать надо на то-же колличество символов. Далее текст рыба- Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений”</p>
+                                                        <div class="slider-testimonials__author">
+                                                            <div class="slider-testimonials__author-line"></div>
+                                                            <div class="slider-testimonials__author-name">Василий Николаевич</div>
+                                                            <div class="slider-testimonials__author-subline">Аноним</div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img class="slider-testimonials__author-avatar" src="static/img/assets/index/avatar.png" alt="avatar" />
-                                                    <p class="slider-testimonials__text">“Сам отзыв. Как всегда, четко и по теме. Расписать надо на то-же колличество символов. Далее текст рыба- Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений”</p>
-                                                    <div class="slider-testimonials__author">
-                                                        <div class="slider-testimonials__author-line"></div>
-                                                        <div class="slider-testimonials__author-name">Василий Николаевич</div>
-                                                        <div class="slider-testimonials__author-subline">Аноним</div>
+                                                    <div class="swiper-slide">
+                                                        <img class="slider-testimonials__author-avatar" src="static/img/assets/index/avatar.png" alt="avatar" />
+                                                        <p class="slider-testimonials__text">“Сам отзыв. Как всегда, четко и по теме. Расписать надо на то-же колличество символов. Далее текст рыба- Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений”</p>
+                                                        <div class="slider-testimonials__author">
+                                                            <div class="slider-testimonials__author-line"></div>
+                                                            <div class="slider-testimonials__author-name">Василий Николаевич</div>
+                                                            <div class="slider-testimonials__author-subline">Аноним</div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-1 order-lg-1">
-                                        <div class="slider__controls">
-                                            <div class="slider__arrow slider-testimonials__arrow js-slider-testimonials__arrow-prev">keyboard_arrow_up</div>
-                                            <div class="slider__dots js-slider-testimonials__dots">
-                                                <div class="slider__dot slider__dot_active"></div>
-                                                <div class="slider__dot"></div>
-                                                <div class="slider__dot"></div>
-                                                <div class="slider__dot"></div>
+                                        <div class="col-lg-1 order-lg-1">
+                                            <div class="slider__controls">
+                                                <div class="slider__arrow slider-testimonials__arrow js-slider-testimonials__arrow-prev">keyboard_arrow_up</div>
+                                                <div class="slider__dots js-slider-testimonials__dots">
+                                                    <div class="slider__dot slider__dot_active"></div>
+                                                    <div class="slider__dot"></div>
+                                                    <div class="slider__dot"></div>
+                                                    <div class="slider__dot"></div>
+                                                </div>
+                                                <div class="slider__arrow slider-testimonials__arrow js-slider-testimonials__arrow-next">keyboard_arrow_down</div>
                                             </div>
-                                            <div class="slider__arrow slider-testimonials__arrow js-slider-testimonials__arrow-next">keyboard_arrow_down</div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-1 align-self-end order-lg-3 d-none d-lg-block">
-                                        <div class="slider__counter-big">
-                                            <div class="swiper-container slider__counter-big-current slider-testimonials__counter-big-current js-slider-testimonials-counter-current">
-                                                <div class="swiper-wrapper"></div>
+                                        <div class="col-lg-1 align-self-end order-lg-3 d-none d-lg-block">
+                                            <div class="slider__counter-big">
+                                                <div class="swiper-container slider__counter-big-current slider-testimonials__counter-big-current js-slider-testimonials-counter-current">
+                                                    <div class="swiper-wrapper"></div>
+                                                </div>
+                                                <div class="slider__counter-big-total js-slider-testimonials-counter-total"></div>
                                             </div>
-                                            <div class="slider__counter-big-total js-slider-testimonials-counter-total"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-                <!-- - section TESTIMONIALS -->
+                    </section>
+                    <!-- - section TESTIMONIALS -->
+                </div>
+                <div id="obmen_wrapper">
+                    <!-- section MASTHEAD -->
+                    <section class="section section-masthead section_pt section_pb bg-light" style="background: url('static/img/assets/obmen/bg_header.jpg') no-repeat top center;background-size: cover;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6 offset-lg-6">
+                                    <h1 class="text-white" id="exc_title">Быстрый и честный обмен</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-masthead__line"></div>
+                    </section>
+                    <!-- - section MASTHEAD -->
+                    <!-- section EXCHANGE -->
+                    <section class="section section_mt section-exchange">
+                        <form id="exchanger_form">
+                            <div class="container container_25">
+                                <div id="section_exchange_from">
+                                    <header class="section-header container" data-os-animation="data-os-animation">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="section-header__label section-header__exchange">
+                                                    <div class="section-header__square"></div><span>ВЫБЕРИТЕ, ЧТО ОТДАЕТЕ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <h2>Мы не пишем колличество резервов, так как это нам не нужно. Резервов достаточно! Для индивидуальной сделки отправьте <a href="#">заявку</a></h2>
+                                            </div>
+                                        </div>
+                                    </header>
+                                    <div class="section section_mt-small section_mb-small">
+                                        <div class="row">
+                                            <div class="col section-features__item exchange_item">
+                                                <div class="form-check figure-feature figure-exchange">
+                                                    <label for="exchange_item_input_1" class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="exchange_item_input" id="exchange_item_input_1">
+                                                        <div class="figure-exchange__icon">
+                                                            <img src="static/img/assets/obmen/icon_usd.png" alt="USD">
+                                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g fill="none" fill-rule="evenodd">
+                                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="figure-exchange__header">
+                                                            <p>USD</p>
+                                                            <h3>НАЛИЧНЫЕ</h3>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col section-features__item exchange_item">
+                                                <div class="form-check figure-feature figure-exchange">
+                                                    <label for="exchange_item_input_2" class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="exchange_item_input" id="exchange_item_input_2">
+                                                        <div class="figure-exchange__icon">
+                                                            <img src="static/img/assets/obmen/icon_bitcoin.png" alt="BITCOIN">
+                                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g fill="none" fill-rule="evenodd">
+                                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="figure-exchange__header">
+                                                            <div class="figure-exchange__headline"></div>
+                                                            <h3>BITCOIN</h3>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col section-features__item exchange_item">
+                                                <div class="form-check figure-feature figure-exchange">
+                                                    <label for="exchange_item_input_3" class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="exchange_item_input" id="exchange_item_input_3">
+                                                        <div class="figure-exchange__icon">
+                                                            <img src="static/img/assets/obmen/icon_ethereum.png" alt="ETHEREUM">
+                                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g fill="none" fill-rule="evenodd">
+                                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="figure-exchange__header">
+                                                            <div class="figure-exchange__headline"></div>
+                                                            <h3>ETHEREUM</h3>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col section-features__item exchange_item">
+                                                <div class="form-check figure-feature figure-exchange">
+                                                    <label for="exchange_item_input_4" class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="exchange_item_input" id="exchange_item_input_4">
+                                                        <div class="figure-exchange__icon">
+                                                            <img src="static/img/assets/obmen/icon_mono.png" alt="MONOBANK">
+                                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g fill="none" fill-rule="evenodd">
+                                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="figure-exchange__header">
+                                                            <p>UAH</p>
+                                                            <h3>MONOBANK</h3>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col section-features__item exchange_item">
+                                                <div class="form-check figure-feature figure-exchange">
+                                                    <label for="exchange_item_input_5" class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="exchange_item_input" id="exchange_item_input_5">
+                                                        <div class="figure-exchange__icon">
+                                                            <img src="static/img/assets/obmen/icon_privat.png" alt="ПРИВАТ24">
+                                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g fill="none" fill-rule="evenodd">
+                                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="figure-exchange__header">
+                                                            <p>UAH</p>
+                                                            <h3>ПРИВАТ24</h3>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col section-features__item exchange_item">
+                                                <div class="form-check figure-feature figure-exchange">
+                                                    <label for="exchange_item_input_6" class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="exchange_item_input" id="exchange_item_input_6">
+                                                        <div class="figure-exchange__icon">
+                                                            <img src="static/img/assets/obmen/icon_advanced_cash.png" alt="ADVANCED CASH">
+                                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g fill="none" fill-rule="evenodd">
+                                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="figure-exchange__header">
+                                                            <p>USD</p>
+                                                            <h3>ADVANCED CASH</h3>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col section-features__item exchange_item">
+                                                <div class="form-check figure-feature figure-exchange">
+                                                    <label for="exchange_item_input_7" class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="exchange_item_input" id="exchange_item_input_7">
+                                                        <div class="figure-exchange__icon">
+                                                            <img src="static/img/assets/obmen/icon_advanced_cash.png" alt="ADVANCED CASH">
+                                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g fill="none" fill-rule="evenodd">
+                                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="figure-exchange__header">
+                                                            <p>EUR</p>
+                                                            <h3>ADVANCED CASH</h3>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col section-features__item exchange_item">
+                                                <div class="form-check figure-feature figure-exchange">
+                                                    <label for="exchange_item_input_8" class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="exchange_item_input" id="exchange_item_input_8">
+                                                        <div class="figure-exchange__icon">
+                                                            <img src="static/img/assets/obmen/icon_perfect_money.png" alt="PERFECT MONEY">
+                                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g fill="none" fill-rule="evenodd">
+                                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="figure-exchange__header">
+                                                            <p>USD</p>
+                                                            <h3>PERFECT MONEY</h3>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col section-features__item exchange_item">
+                                                <div class="form-check figure-feature figure-exchange">
+                                                    <label for="exchange_item_input_9" class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="exchange_item_input" id="exchange_item_input_9">
+                                                        <div class="figure-exchange__icon">
+                                                            <img src="static/img/assets/obmen/icon_perfect_money.png" alt="PERFECT MONEY">
+                                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g fill="none" fill-rule="evenodd">
+                                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="figure-exchange__header">
+                                                            <p>EUR</p>
+                                                            <h3>PERFECT MONEY</h3>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- #section_exchange_from -->
+                                <div id="section_exchange_to">
+                                    <header class="section-header container">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="section-header__label section-header__exchange">
+                                                    <div class="section-header__square"></div><span>ВЫБЕРЕТЕ, ЧТО ПОЛУЧАЕТЕ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </header>
+                                    <div class="section section_mt-small section_mb-small">
+                                        <div class="row">
+                                            <div class="col section-features__item exchange_item">
+                                                <div class="form-check figure-feature figure-exchange">
+                                                    <label for="exchange_item_output_1" class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="exchange_item_output" id="exchange_item_output_1">
+                                                        <div class="figure-exchange__icon">
+                                                            <img src="static/img/assets/obmen/icon_usd.png" alt="USD">
+                                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g fill="none" fill-rule="evenodd">
+                                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="figure-exchange__header">
+                                                            <p>USD</p>
+                                                            <h3>НАЛИЧНЫЕ</h3>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col section-features__item exchange_item">
+                                                <div class="form-check figure-feature figure-exchange">
+                                                    <label for="exchange_item_output_2" class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="exchange_item_output" id="exchange_item_output_2">
+                                                        <div class="figure-exchange__icon">
+                                                            <img src="static/img/assets/obmen/icon_bitcoin.png" alt="BITCOIN">
+                                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g fill="none" fill-rule="evenodd">
+                                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="figure-exchange__header">
+                                                            <div class="figure-exchange__headline"></div>
+                                                            <h3>BITCOIN</h3>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col section-features__item exchange_item">
+                                                <div class="form-check figure-feature figure-exchange">
+                                                    <label for="exchange_item_output_3" class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="exchange_item_output" id="exchange_item_output_3">
+                                                        <div class="figure-exchange__icon">
+                                                            <img src="static/img/assets/obmen/icon_ethereum.png" alt="ETHEREUM">
+                                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g fill="none" fill-rule="evenodd">
+                                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="figure-exchange__header">
+                                                            <div class="figure-exchange__headline"></div>
+                                                            <h3>ETHEREUM</h3>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col section-features__item exchange_item">
+                                                <div class="form-check figure-feature figure-exchange">
+                                                    <label for="exchange_item_output_4" class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="exchange_item_output" id="exchange_item_output_4">
+                                                        <div class="figure-exchange__icon">
+                                                            <img src="static/img/assets/obmen/icon_mono.png" alt="MONOBANK">
+                                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g fill="none" fill-rule="evenodd">
+                                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="figure-exchange__header">
+                                                            <p>UAH</p>
+                                                            <h3>MONOBANK</h3>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col section-features__item exchange_item">
+                                                <div class="form-check figure-feature figure-exchange">
+                                                    <label for="exchange_item_output_5" class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="exchange_item_output" id="exchange_item_output_5">
+                                                        <div class="figure-exchange__icon">
+                                                            <img src="static/img/assets/obmen/icon_privat.png" alt="ПРИВАТ24">
+                                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g fill="none" fill-rule="evenodd">
+                                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="figure-exchange__header">
+                                                            <p>UAH</p>
+                                                            <h3>ПРИВАТ24</h3>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col section-features__item exchange_item">
+                                                <div class="form-check figure-feature figure-exchange">
+                                                    <label for="exchange_item_output_6" class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="exchange_item_output" id="exchange_item_output_6">
+                                                        <div class="figure-exchange__icon">
+                                                            <img src="static/img/assets/obmen/icon_advanced_cash.png" alt="ADVANCED CASH">
+                                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g fill="none" fill-rule="evenodd">
+                                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="figure-exchange__header">
+                                                            <p>USD</p>
+                                                            <h3>ADVANCED CASH</h3>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col section-features__item exchange_item">
+                                                <div class="form-check figure-feature figure-exchange">
+                                                    <label for="exchange_item_output_7" class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="exchange_item_output" id="exchange_item_output_7">
+                                                        <div class="figure-exchange__icon">
+                                                            <img src="static/img/assets/obmen/icon_advanced_cash.png" alt="ADVANCED CASH">
+                                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g fill="none" fill-rule="evenodd">
+                                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="figure-exchange__header">
+                                                            <p>EUR</p>
+                                                            <h3>ADVANCED CASH</h3>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col section-features__item exchange_item">
+                                                <div class="form-check figure-feature figure-exchange">
+                                                    <label for="exchange_item_output_8" class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="exchange_item_output" id="exchange_item_output_8">
+                                                        <div class="figure-exchange__icon">
+                                                            <img src="static/img/assets/obmen/icon_perfect_money.png" alt="PERFECT MONEY">
+                                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g fill="none" fill-rule="evenodd">
+                                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="figure-exchange__header">
+                                                            <p>USD</p>
+                                                            <h3>PERFECT MONEY</h3>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col section-features__item exchange_item">
+                                                <div class="form-check figure-feature figure-exchange">
+                                                    <label for="exchange_item_output_9" class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="exchange_item_output" id="exchange_item_output_9">
+                                                        <div class="figure-exchange__icon">
+                                                            <img src="static/img/assets/obmen/icon_perfect_money.png" alt="PERFECT MONEY">
+                                                            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g fill="none" fill-rule="evenodd">
+                                                                    <g transform="translate(-134.000000, -98.000000)">
+                                                                        <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="figure-exchange__header">
+                                                            <p>EUR</p>
+                                                            <h3>PERFECT MONEY</h3>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- #section_exchange_to -->
+                                <div id="section_exchange_ammount">
+                                    <header class="section-header container">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="section-header__label section-header__exchange">
+                                                    <div class="section-header__square"></div><span>ВВЕДИТЕ СУММУ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </header>
+                                    <div class="section section_mt-small section_mb-small">
+                                        <div class="row">
+                                            <div class="col-lg-8 offset-lg-2">
+                                                <div class="form-group form-group_amount">
+                                                    <label for="exchange_input">Отдаете</label>
+                                                    <div class="input-group">
+                                                        <input type="number" id="exchange_input" class="form-control">
+                                                        <div class="input-group-append">
+                                                            <span class="input-group-text" id="exchange_input_currency">BTC</span>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="amount_note list-unstyled d-flex justify-content-between">
+                                                       <li>Курс обмена: 1 BTC = 8000.00 USD</li> 
+                                                       <li>Комиссия сервиса: 0.56 %</li> 
+                                                    </ul>
+                                                </div>
+                                                <dl class="text-center amount-output">
+                                                    <dt>Получаете</dt>
+                                                    <dd>
+                                                        <span id="exchange_output">8000.00</span> <span id="exchange_output_currency">USD</span></span>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- #section_exchange_ammount -->
+                                <div id="section_exchange_detals">
+                                    <header class="section-header container">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="section-header__label section-header__exchange">
+                                                    <div class="section-header__square"></div><span>ДАННЫЕ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </header>
+                                    <div class="section section_mt-small section_mb-small">
+                                        <div class="row">
+                                            <div class="col-lg-8 offset-lg-2">
+                                                <div class="form-group form-group_detals">
+                                                    <label for="exchange_email">Ваш адрес E-mail</label>
+                                                    <input type="email" id="exchange_email" class="form-control">
+                                                </div>
+                                                <div class="form-group form-group_detals">
+                                                    <label for="exchange_card">Номер карты</label>
+                                                    <input type="text" id="exchange_card" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- #section_exchange_detals -->
+                                <div id="section_exchange_info">
+                                    <header class="section-header container">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="section-header__label section-header__exchange">
+                                                    <div class="section-header__square"></div><span>ВАЖНАЯ ИНФОРМАЦИЯ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <h2>
+                                                    Процесс обмена занимает от 10-30 минут.<br>
+                                                    Резервов достаточно! Для индивидуальной сделки, отправьте <a href="#">заявку</a>
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </header>
+                                    <div class="section section_mt-small section_mb-small">
+                                        <div class="row">
+                                            <div class="col-lg-8 offset-lg-2">
+                                                <button type="button" class="button button_accent btn_exchange" id="btn_exchange"><span><i class="lnr lnr-sync" id="btn_exchange_i"></i>НАЧАТЬ ОБМЕН</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- #section_exchange_info -->
+                            </div>
+                        </form>
+                    </section>
+                    <!-- - section EXCHANGE -->
+                </div>
                 <!-- section CTA -->
                 <section class="section section-cta section_pt section_pb color-white">
                     <div class="container-fluid">
@@ -598,6 +1119,7 @@
         <script src="static/js/separate-js/common.js"></script>
         <!-- - INIT COMPONENTS-->
         <!-- PAGE SCRIPTS-->
+        <script src="static/js/custom.js"></script>
         <!-- - PAGE SCRIPTS-->
     </body>
 

@@ -5,9 +5,9 @@
 
   	$("#btn_exchange").hover(
 		  function() {
-			$("#btn_exchange_i").addClass("fa-spin");
+			$("#btn_exchange_i").addClass("lnr-spin");
 		  }, function() {
-			$("#btn_exchange_i").removeClass("fa-spin");
+			$("#btn_exchange_i").removeClass("lnr-spin");
 		  }
 		);
 

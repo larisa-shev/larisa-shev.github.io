@@ -180,7 +180,7 @@ a:focus {
 }
 
 .bg-accent {
-  background-color: #3c5a64;
+  background-color: #222;
 }
 
 /* ======================================================================== */
@@ -3852,7 +3852,7 @@ a.logo:hover {
 
 .section-header a {
   display: inline-block;
-  border-bottom: 1px solid rgba(182, 140, 112, 0.3);
+  border-bottom: 1px solid #3c5a64;
 }
 
 .section-header a:hover, .section-header a:focus {

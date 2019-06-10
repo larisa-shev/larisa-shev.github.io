@@ -3,6 +3,14 @@
 
   $(document).ready(function () {
 
+  	$("#btn_exchange").hover(
+		  function() {
+			$("#btn_exchange_i").addClass("fa-spin");
+		  }, function() {
+			$("#btn_exchange_i").removeClass("fa-spin");
+		  }
+		);
+
   	$("#section_exchange_from").find('label').each(function(index){
   		$(this).on('click', function(){
 	  		$("#section_exchange_to").show();
@@ -29,3 +37,27 @@
   }); //end ready
 
 }(jQuery));
+
+function goto_exchange(){
+	$('#start_wrapper').animate({
+		height: '0',
+    opacity: '0.7'
+	}, 2000).hide(3500);
+	$('#obmen_wrapper').animate({
+		top: '0',
+		height: 'show',
+		opacity: '1'
+	}, 2000).show(2500);
+	$('#exc_title').animate({
+		width: '100%',
+		opacity: '1'
+	}, 2000).show(2000);
+	$('#section_exchange_from').animate({
+		top: '0',
+		height: 'show',
+		opacity: '1'
+	}, 3000).show(3500);
+	$('html, body').animate({
+    scrollTop: $("#page_wrapper").offset().top-100
+  }, 1500);
+}
